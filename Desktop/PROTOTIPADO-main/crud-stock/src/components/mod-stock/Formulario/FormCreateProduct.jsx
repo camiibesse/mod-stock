@@ -2,7 +2,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "react-bootstrap/Button";
 import FormBs from "react-bootstrap/Form";
-import "./formulario.css";
 import { axiosInstance } from "../../../services/axios.config";
 
 const FormCreateProduct = () => {
@@ -47,7 +46,7 @@ const FormCreateProduct = () => {
             .catch((err) => console.log(err));
         }}
       >
-        {({ values, isSubmitting, touched, errors }) => (
+        {({ isSubmitting, touched, errors }) => (
           <Form>
             <FormBs.Group className="mb-3">
               <label htmlFor="name">Nombre del producto</label>
@@ -56,7 +55,8 @@ const FormCreateProduct = () => {
                 id="name"
                 name="name"
                 placeholder="Buzo"
-                className="form-control field-input"
+                className="form-control focus-ring-info"
+                style={{backgroundColor:'transparent', color:'#fff' }}
               />
               {errors.name && touched.name && (
                 <ErrorMessage name="name" component="div"></ErrorMessage>
@@ -69,7 +69,8 @@ const FormCreateProduct = () => {
                 id="description"
                 name="description"
                 placeholder="Descripción del producto"
-                className="form-control field-input"
+                className="form-control"
+                style={{backgroundColor:'transparent', color:'#fff'}}
               />
               {errors.description && touched.description && (
                 <ErrorMessage name="description" component="div"></ErrorMessage>
@@ -82,7 +83,8 @@ const FormCreateProduct = () => {
                 id="image"
                 name="image"
                 placeholder="Imagen"
-                className="form-control field-input"
+                className="form-control"
+                style={{backgroundColor:'transparent', color:'#fff'}}
               />
               {errors.image && touched.image && (
                 <ErrorMessage name="image" component="div"></ErrorMessage>
@@ -95,7 +97,8 @@ const FormCreateProduct = () => {
                 id="stock"
                 name="stock"
                 placeholder="stock"
-                className="form-control field-input"
+                className="form-control"
+                style={{backgroundColor:'transparent', color:'#fff'}}
               />
               {errors.stock && touched.stock && (
                 <ErrorMessage name="stock" component="div"></ErrorMessage>
@@ -108,7 +111,8 @@ const FormCreateProduct = () => {
                 id="price"
                 name="price"
                 placeholder="price"
-                className="form-control field-input"
+                className="form-control"
+                style={{backgroundColor:'transparent', color:'#fff'}}
               />
               {errors.price && touched.price && (
                 <ErrorMessage name="price" component="div"></ErrorMessage>

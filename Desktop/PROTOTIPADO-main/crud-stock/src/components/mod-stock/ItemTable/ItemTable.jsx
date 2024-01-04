@@ -5,7 +5,7 @@ import { ItemsContext, UPLOAD_ITEMS } from "../../../Context/ItemsContext";
 
 
 const ItemTable = ({ item }) => {
-  const { name, price, stock, id } = item;
+  const { name, price, stock, image, id } = item;
   const [modalShow, setModalShow] = useState(false);
   const {items, dispatch} = useContext(ItemsContext)
 
@@ -22,14 +22,15 @@ const ItemTable = ({ item }) => {
 
   return (
     <>
-    <tr>
-      <td>{id}</td>
-      <td>{name}</td>
-      <td>{price}</td>
-      <td>{stock}</td>
-      <td style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <i style={{ cursor: "pointer" }} className="bi bi-trash3-fill"onClick={()=>handleDelete(id)} ></i>
-        <i style={{ cursor: "pointer" }} className="bi bi-pencil-square" onClick={() => setModalShow(true)} ></i>
+    <tr className="align-middle">
+      <td style={{textAlign:'center'}}>{id}</td>
+      <td style={{textAlign:'center'}}>{name}</td>
+      <td style={{textAlign:'center'}}>{price}</td>
+      <td style={{textAlign:'center'}}>{stock}</td>
+      <td style={{textAlign:'center'}}><img src={image} alt={name} style={{width:'100px', height:'100px'}}/></td>      
+      <td style={{textAlign:'center'}}>
+        <i style={{ cursor: "pointer", margin:'10px'}} className="bi bi-trash3-fill"onClick={()=>handleDelete(id)} ></i>
+        <i style={{ cursor: "pointer", margin:'10px' }} className="bi bi-pencil-square" onClick={() => setModalShow(true)} ></i>
       </td>
     </tr>
     <Modal
