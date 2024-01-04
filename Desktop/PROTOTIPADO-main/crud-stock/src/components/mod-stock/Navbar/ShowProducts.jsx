@@ -4,7 +4,7 @@ import { ItemsContext, UPLOAD_ITEMS } from "../../../Context/ItemsContext";
 import TableBs from "react-bootstrap/Table";
 import ItemTable from "../ItemTable/ItemTable";
 
-//ascnsan
+
 
 const ShowProducts = () => {
   const { items, dispatch } = useContext(ItemsContext);
