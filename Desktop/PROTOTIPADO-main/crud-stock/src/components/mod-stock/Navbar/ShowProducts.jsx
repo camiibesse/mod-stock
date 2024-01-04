@@ -39,6 +39,7 @@ const ShowProducts = () => {
             <tbody>
               {items.map((item, i) => (
                 <ItemTable item={item} key={i} />
+
               ))}
             </tbody>
           </TableBs>
