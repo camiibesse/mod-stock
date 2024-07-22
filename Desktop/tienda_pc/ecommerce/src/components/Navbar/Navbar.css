@@ -1,0 +1,96 @@
+.free{
+    padding: 10px 30px;
+    width: 100%;
+    background-color: #010f1c;
+    display: flex;
+}
+
+.free .icon{
+    color: #f3b123;
+    font-size: 32px;
+}
+
+.free p{
+    margin-left: 10px;
+    margin-top: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main_header{
+    padding: 30px 40px;
+    width: 100%;
+    border-bottom: 1px solid #010f1c;
+}
+
+.main_header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main_header .container .icon{
+    display: flex;
+    margin-right: 50px;
+}
+
+.main_header .container .icon .account{
+    display: flex;
+    margin-right: 30px;    
+}
+
+.main_header .container .icon .account .user_icon{
+    margin-right: 10px;
+    font-size: 22px;
+    color: #010f1c;
+    cursor: pointer;
+}
+
+.main_header .container .icon .account p{
+    margin-right: 5px;
+    margin-top: 2px;   
+}
+
+.main_header .container .icon .bag_icon{
+    display: flex;
+}
+
+.main_header .container .icon .bag_icon .link{
+    margin-right: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #0989ff;
+}
+
+.header{
+    padding: 20px 30px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px;
+}
+
+.header .container{
+    justify-content: space-between;
+    max-width: 100%;
+    display: flex;
+}
+
+.header .container .nav ul{
+    display: flex;
+}
+
+.header .container .nav ul li{
+    margin-left: 20px;
+    list-style: none; 
+}
+
+.header .container .nav ul li .link{
+    text-decoration: none;
+    color: #010f1c;
+    transition: 0.5s; 
+}
+
+.header .container .nav ul li .link:hover{
+    color: #0989ff;
+}
+
